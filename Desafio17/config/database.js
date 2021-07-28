@@ -9,6 +9,7 @@ const mysql = {
     pool: { min: 0, max: 7 }
 }
 
+module.exports = mysql;
 
 const sqlite = {
   client: 'sqlite3',
@@ -18,4 +19,4 @@ const sqlite = {
   useNullAsDefault: true
 }
 
-module.exports = sqlite;
+module.exports = mysql;

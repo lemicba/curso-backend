@@ -9,11 +9,12 @@ const server = require('http').Server(app);
 const io = require('socket.io')(server);
 
 const mensaje = require('./models/mensaje');
+const prod = require('./models/producto');
 
 const PORT = process.env.PORT || config.PUERTO;
 
 let PRODUCTS_DB = [];
-let CHAT_DB = [];
+let CHAT_DB =  [];
 
 app.set("views", "./views");
 app.set("view engine", "ejs");
@@ -28,24 +29,22 @@ app.get("/api/productos/vista", (req, res) => {
         title: "Datos de productos",
         data: PRODUCTS_DB,
         existe: PRODUCTS_DB.length!==0,
-        message: CHAT_DB
+        message: CHAT_DB,
        });
 });
-
-
 
 io.on('connection', (socket) => {
     socket.on('productos', (producto) => {
       io.emit('productos', producto);
       newProducto = {
           title: producto.title,
-          price: producto.price, 
+          price: producto.price,
           thumbnail: producto.thumbnail,
           id: PRODUCTS_DB.length + 1,
           socketid: socket.id
       };
-      PRODUCTS_DB.push(newProducto)
-      console.log(PRODUCTS_DB)
+      PRODUCTS_DB.push(newProducto);
+      prod.guardar(newProducto);
     });
 
     socket.on('cliente-mensaje', async (message) => {

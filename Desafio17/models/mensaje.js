@@ -21,6 +21,16 @@ class Mensaje {
             throw error;
         }
     }
+ 
+    async leer() {
+        try {
+            let msg = await knex.select('email', 'timestamp', 'mensaje').from('chats')
+            let mensajes = JSON.stringify(msg)
+            return mensajes;
+        } catch (error) {
+            throw error;
+        }
+    }
 }
 
 module.exports = new Mensaje();
