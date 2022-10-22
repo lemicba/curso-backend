@@ -1,0 +1,38 @@
+[
+   {
+      "title": "Escuadra",
+      "price": 123.45,
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Squadra_45.jpg",
+      "id": 1
+   },
+   {
+      "title": "Calculadora",
+      "price": 234.56,
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Squadra_45.jpg",
+      "id": 2
+   },
+   {
+      "title": "Globo Terráqueo",
+      "price": 345.67,
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Squadra_45.jpg",
+      "id": 3
+   },
+   {
+      "title": "Lola",
+      "price": "6787",
+      "thumbnail": "https://cdn.pocket-lint.com/r/s/x1920/assets/images/161396-laptops-review-hands-on-macbook-air-review-image1-v2jzcb3rqd.jpg",
+      "id": 4
+   },
+   {
+      "title": "Elo",
+      "price": "766",
+      "thumbnail": "https://cdn.pocket-lint.com/r/s/x1920/assets/images/161396-laptops-review-hands-on-macbook-air-review-image1-v2jzcb3rqd.jpg",
+      "id": 5
+   },
+   {
+      "title": "Title",
+      "price": "74",
+      "thumbnail": "https://cdn.pocket-lint.com/r/s/x1920/assets/images/161396-laptops-review-hands-on-macbook-air-review-image1-v2jzcb3rqd.jpg",
+      "id": 6
+   }
+]

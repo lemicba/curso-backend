@@ -1,0 +1,20 @@
+<div>
+  <h1> Lista de productos</h1>
+  <table>
+    <tr>
+      <th>Título</th>
+      <th>Precio</th>
+      <th>Miniatura</th>
+    </tr>
+    {{#if productos.length}}
+    {{#each productos}}
+    <tr>
+      <td>{{this.title}}</td>
+      <td>{{this.price}}</td>
+      <td><img height="72px" width="auto" src={{this.thumbnail}} /> </td>
+    </tr>
+    {{/each}}
+    {{/if}}
+  </table>
+  <a href="/"><button>Volver al formulario</button></a>
+</div>
